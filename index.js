@@ -267,7 +267,7 @@ updateRole = () => {
     }
   ])
   .then(function ({ employee_id, role_id }) {
-    //UPDATE `table_name` SET `column_name` = `new_value' [WHERE condition]
+    
     connection.query(`UPDATE employee SET role_id = ${roles.indexOf(role_id) + 1} WHERE id = ${employees.indexOf(employee_id) + 1}`, function (err, data) {
         if (err) throw err;
 
